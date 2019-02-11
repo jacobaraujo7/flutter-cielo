@@ -1,4 +1,5 @@
-import 'package:meta/meta.dart';
+
+import 'package:flutter/material.dart';
 
 class Merchant {
 

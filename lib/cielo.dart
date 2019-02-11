@@ -1,6 +1,6 @@
 library cielo;
 
-export 'CieloEcommerce.dart';
+export 'cielo_ecommerce.dart';
 export 'src/Address.dart';
 export 'src/CreditCard.dart';
 export 'src/Customer.dart';

@@ -2,8 +2,8 @@ import 'package:cielo/src/CreditCard.dart';
 import 'package:cielo/src/Environment.dart';
 import 'package:cielo/src/Merchant.dart';
 import 'package:cielo/src/Sale.dart';
-import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
 class CieloEcommerce {
   final Environment environment;
