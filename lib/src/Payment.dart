@@ -1,5 +1,5 @@
-import 'package:cielo/src/CreditCard.dart';
-import 'package:cielo/src/Link.dart';
+import 'package:flutter_cielo/src/CreditCard.dart';
+import 'package:flutter_cielo/src/Link.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'Payment.g.dart';

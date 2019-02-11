@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cielo/cielo.dart';
+import 'package:flutter_cielo/flutter_cielo.dart';
 
 void main() => runApp(MyApp());
 
@@ -70,6 +70,25 @@ class _MyHomePageState extends State<MyHomePage> {
       print(e);
 
     }
+
+
+
+    // CreditCard cart = CreditCard(
+    //       cardNumber: "1234123412341231",
+    //       holder: "Teste Holder",
+    //       expirationDate: "12/2030",
+    //       brand: "Visa",
+    //     );
+    // try{
+
+    // var response = await cielo.tokenizeCard(cart);
+    // print(response.cardToken);
+
+    // } catch(e){
+    //   print("ERRO!!");
+    //   print(e);
+
+    // }
 
     
 

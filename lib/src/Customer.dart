@@ -1,4 +1,4 @@
-import 'package:cielo/src/Address.dart';
+import 'package:flutter_cielo/src/Address.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'Customer.g.dart';

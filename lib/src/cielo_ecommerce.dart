@@ -1,7 +1,7 @@
-import 'package:cielo/src/CreditCard.dart';
-import 'package:cielo/src/Environment.dart';
-import 'package:cielo/src/Merchant.dart';
-import 'package:cielo/src/Sale.dart';
+import 'package:flutter_cielo/src/CreditCard.dart';
+import 'package:flutter_cielo/src/Environment.dart';
+import 'package:flutter_cielo/src/Merchant.dart';
+import 'package:flutter_cielo/src/Sale.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
