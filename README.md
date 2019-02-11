@@ -108,8 +108,9 @@ CreditCard cart = CreditCard(
 
 }
 
-
+```
 
 ## Para mais informações
 
-Acesse o Blog do Flutterando Clicando [aqui](https://flutterando.com.br).
+
+Acesse o Blog do Flutterando Clicando [aqui](https://flutterando.com.br/) .
