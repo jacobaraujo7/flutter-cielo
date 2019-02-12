@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
         creditCard: CreditCard(
           cardNumber: "1234123412341231",
           holder: "Teste Holder",
-          expirationDate: "12/2030",
+          expirationDate: "12/2000",
           securityCode: "123",
           brand: "Visa",
         )
@@ -65,10 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
     var response = await cielo.createSale(sale);
     print(response.payment.paymentId);
 
-    } catch(e){
-      print("ERRO!!");
-      print(e);
-
+    } on CieloException catch(e){
+      print(e.message);
+      print(e.errors[0].message);
+      print(e.errors[0].code);
     }
 
 

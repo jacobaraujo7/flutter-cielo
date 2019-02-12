@@ -9,3 +9,5 @@ export 'src/Link.dart';
 export 'src/Merchant.dart';
 export 'src/Payment.dart';
 export 'src/Sale.dart';
+export 'src/CieloError.dart';
+export 'src/CieloException.dart';

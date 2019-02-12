@@ -85,3 +85,5 @@ class TypePayment {
   static String CreditCard = 'CreditCard';
   static String Boleto = 'Boleto';
 }
+
+

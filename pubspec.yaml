@@ -1,6 +1,6 @@
 name: flutter_cielo
 description: Conecte ao sistema de pagamento da Cielo
-version: 0.0.1
+version: 1.0.1
 author: Jacob Moura <jacobaraujo7@gmail.com>
 homepage: https://github.com/jacobaraujo7/flutter-cielo
 

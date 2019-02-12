@@ -1,6 +1,6 @@
 # flutter-cielo
 
-Package para criar transações usando o SDK da Cielo e-Commerce
+Package para criar transações usando o SDK da Cielo e-Commerce. Para mais informações acesse a [`documentação`](https://developercielo.github.io/manual/cielo-ecommerce).
 
 ## Start
 
@@ -11,32 +11,32 @@ Adicionar [`flutter_cielo`](https://pub.dartlang.org/packages/flutter_cielo) no 
 import 'package:flutter_cielo/flutter_cielo.dart';
 
 ...
-
+//inicia objeto da api
 final CieloEcommerce cielo = CieloEcommerce(
-      environment: Environment.SANDBOX,
+      environment: Environment.SANDBOX, // ambiente de desenvolvimento
       merchant: Merchant(
-        merchantId: "933fc4e5-ddfd-4cba-a6de-4c07232d73c6",
-        merchantKey: "KDRTLNYFNKMXHBSAVREHOZHBHWSWWYIXWWNQWRCN",
+        merchantId: "SEU_MERCHANT_ID",
+        merchantKey: "SEU_MERCHANT_KEY",
       ));
 
 ...
-
+    //Objeto de venda
     Sale sale = Sale(
-      merchantOrderId: "123",
-      customer: Customer(
+      merchantOrderId: "123", // id único de sua venda
+      customer: Customer( //objeto de dados do usuário
         name: "Comprador crédito simples"
       ),
-      payment: Payment(
-        type: TypePayment.CreditCard,
-        amount: 7777,
-        installments: 1,
-        softDescriptor: "Cielo",
-        creditCard: CreditCard(
-          cardNumber: "1234123412341231",
-          holder: "Teste Holder",
-          expirationDate: "12/2030",
-          securityCode: "123",
-          brand: "Visa",
+      payment: Payment(    // objeto para de pagamento
+        type: TypePayment.CreditCard, //tipo de pagamento
+        amount: 7777, // valor da compra em centavos
+        installments: 1, // número de parcelas
+        softDescriptor: "Cielo", //descrição que aparecerá no extrato do usuário. Apenas 15 caracteres
+        creditCard: CreditCard( //objeto de Cartão de crédito
+          cardNumber: "1234123412341231", //número do cartão
+          holder: "Teste Holder", //nome do usuário impresso no cartão
+          expirationDate: "12/2030", // data de expiração
+          securityCode: "123", // código de segurança
+          brand: "Visa", // bandeira
         )
       )
     );
@@ -65,9 +65,10 @@ CreditCard cart = CreditCard(
     try {
       var response = await cielo.tokenizeCard(cart);
       print(response.cardToken);
-    } catch (e) {
-      print("ERRO!!");
-      print(e);
+    } on CieloException catch(e){
+      print(e.message);
+      print(e.errors[0].message);
+      print(e.errors[0].code);
     }
 
 ...
@@ -99,8 +100,10 @@ CreditCard cart = CreditCard(
   try{
     var response = await cielo.createSale(sale);
     print(response.payment.paymentId);
-    } catch(e){
-      print(e);
+     } on CieloException catch(e){
+      print(e.message);
+      print(e.errors[0].message);
+      print(e.errors[0].code);
     }
 
   ....
