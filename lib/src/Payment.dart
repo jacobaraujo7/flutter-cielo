@@ -83,5 +83,3 @@ class TypePayment {
   static String get creditCard => 'CreditCard';
   static String get boleto => 'Boleto';
 }
-
-

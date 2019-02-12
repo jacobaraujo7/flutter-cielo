@@ -7,8 +7,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -17,7 +15,6 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
-  
 }
 
 class MyHomePage extends StatefulWidget {
@@ -40,7 +37,39 @@ class _MyHomePageState extends State<MyHomePage> {
       ));
 
   _incrementCounter() async {
-    print("Iniciando pagamento....");
+    // print("Iniciando pagamento....");
+    // Sale sale = Sale(
+    //   merchantOrderId: "123",
+    //   customer: Customer(
+    //     name: "Comprador crédito simples"
+    //   ),
+    //   payment: Payment(
+    //     type: TypePayment.creditCard,
+    //     amount: 7777,
+    //     installments: 1,
+    //     softDescriptor: "Pagame",
+    //     creditCard: CreditCard(
+    //       cardNumber: "1234123412341231",
+    //       holder: "Teste Holder",
+    //       expirationDate: "12/2030",
+    //       securityCode: "123",
+    //       brand: "Visa",
+    //     )
+    //   )
+    // );
+
+    // try{
+    // var response = await cielo.createSale(sale);
+    // print(response.payment.paymentId);
+
+    // } on CieloException catch(e){
+    //   print(e.message);
+    //   print(e.errors[0].message);
+    //   print(e.errors[0].code);
+    // }
+
+
+    print("Iniciando pagamento tokenizado....");
     Sale sale = Sale(
       merchantOrderId: "123",
       customer: Customer(
@@ -52,11 +81,9 @@ class _MyHomePageState extends State<MyHomePage> {
         installments: 1,
         softDescriptor: "Pagame",
         creditCard: CreditCard(
-          cardNumber: "1234123412341231",
-          holder: "Teste Holder",
-          expirationDate: "12/2030",
+          cardToken: "302c35e9-be30-487c-9c09-44ad0746e4b5",
           securityCode: "123",
-          brand: "Visa", 
+          brand: "Visa",
         )
       )
     );
@@ -69,31 +96,30 @@ class _MyHomePageState extends State<MyHomePage> {
       print(e.message);
       print(e.errors[0].message);
       print(e.errors[0].code);
-    }
+    } 
 
-
+    // print("Tokenizando cartão....");
 
     // CreditCard cart = CreditCard(
-    //       cardNumber: "1234123412341231",
-    //       holder: "Teste Holder",
-    //       expirationDate: "12/2030",
-    //       brand: "Visa",
-    //     );
-    // try{
-
-    // var response = await cielo.tokenizeCard(cart);
-    // print(response.cardToken);
-
-    // } catch(e){
-    //   print("ERRO!!");
-    //   print(e);
-
+    //   customerName: "Comprador Teste Cielo",
+    //   cardNumber: "1234123412341231",
+    //   securityCode: "123",
+    //   holder: "SARA M M F",
+    //   expirationDate: "10/2026",
+    //   brand: "Visa",
+    // );
+    // try {
+    //   var response = await cielo.tokenizeCard(cart);
+    //   print(response.cardToken);
+    //   print(response.cardNumber);
+    // } catch (e) {
+    //   print(e.message);
+    //   print(e.errors[0].message);
+    //   print(e.errors[0].code);
     // }
 
-    
 
-
-  }
+   }
 
   @override
   Widget build(BuildContext context) {

@@ -9,6 +9,7 @@ class CreditCard {
   String securityCode;
   String brand;
   String cardToken;
+  String customerName;
 
   CreditCard({
     this.cardNumber,
@@ -17,6 +18,7 @@ class CreditCard {
     this.securityCode,
     this.brand,
     this.cardToken,
+    this.customerName,
   });
 
   factory CreditCard.token(

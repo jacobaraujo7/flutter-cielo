@@ -1,3 +1,7 @@
+## [1.0.5] - 12 de Fevereiro 2019.
+
+* Correções na criação de cartão tokenizado
+
 ## [1.0.1] - 12 de Fevereiro 2019.
 
 * Adicionado tratamento de erros (veja página principal)

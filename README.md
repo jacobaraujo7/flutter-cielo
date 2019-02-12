@@ -57,6 +57,7 @@ final CieloEcommerce cielo = CieloEcommerce(
 ...
 
 CreditCard cart = CreditCard(
+          customerName: "Comprador Teste Cielo",
           cardNumber: "1234123412341231",
           holder: "Teste Holder",
           expirationDate: "12/2030",

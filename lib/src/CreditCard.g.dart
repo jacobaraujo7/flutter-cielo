@@ -13,6 +13,7 @@ CreditCard _$CreditCardFromJson(Map<String, dynamic> json) {
       expirationDate: json['ExpirationDate'] as String,
       securityCode: json['SecurityCode'] as String,
       brand: json['Brand'] as String,
+      customerName: json['CustomerName'] as String,
       cardToken: json['CardToken'] as String);
 }
 
@@ -23,5 +24,6 @@ Map<String, dynamic> _$CreditCardToJson(CreditCard instance) =>
       'ExpirationDate': instance.expirationDate,
       'SecurityCode': instance.securityCode,
       'Brand': instance.brand,
+      'CustomerName': instance.customerName,
       'CardToken': instance.cardToken
     };
