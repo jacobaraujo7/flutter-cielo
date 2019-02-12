@@ -1,10 +1,8 @@
 import 'package:flutter_cielo/src/CreditCard.dart';
 import 'package:flutter_cielo/src/Link.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'Payment.g.dart';
 
-@JsonSerializable()
 class Payment {
   String type;
   int amount;
@@ -82,8 +80,8 @@ class Payment {
 }
 
 class TypePayment {
-  static String CreditCard = 'CreditCard';
-  static String Boleto = 'Boleto';
+  static String get creditCard => 'CreditCard';
+  static String get boleto => 'Boleto';
 }
 
 

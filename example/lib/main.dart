@@ -47,16 +47,16 @@ class _MyHomePageState extends State<MyHomePage> {
         name: "Comprador crédito simples"
       ),
       payment: Payment(
-        type: TypePayment.CreditCard,
+        type: TypePayment.creditCard,
         amount: 7777,
         installments: 1,
         softDescriptor: "Pagame",
         creditCard: CreditCard(
           cardNumber: "1234123412341231",
           holder: "Teste Holder",
-          expirationDate: "12/2000",
+          expirationDate: "12/2030",
           securityCode: "123",
-          brand: "Visa",
+          brand: "Visa", 
         )
       )
     );

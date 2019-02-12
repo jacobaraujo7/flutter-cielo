@@ -27,7 +27,7 @@ final CieloEcommerce cielo = CieloEcommerce(
         name: "Comprador crédito simples"
       ),
       payment: Payment(    // objeto para de pagamento
-        type: TypePayment.CreditCard, //tipo de pagamento
+        type: TypePayment.creditCard, //tipo de pagamento
         amount: 7777, // valor da compra em centavos
         installments: 1, // número de parcelas
         softDescriptor: "Cielo", //descrição que aparecerá no extrato do usuário. Apenas 15 caracteres
@@ -85,7 +85,7 @@ CreditCard cart = CreditCard(
         name: "Comprador crédito simples"
       ),
       payment: Payment(
-        type: TypePayment.CreditCard,
+        type: TypePayment.creditCard,
         amount: 7777,
         installments: 1,
         softDescriptor: "Cielo",
