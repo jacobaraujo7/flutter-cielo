@@ -24,7 +24,7 @@ class CreditCard {
   factory CreditCard.token(
       {String cardToken, String securityCode, String brand}) {
     return CreditCard(
-        cardNumber: cardToken, securityCode: securityCode, brand: brand);
+        cardToken: cardToken, securityCode: securityCode, brand: brand);
   }
 
   factory CreditCard.fromJson(Map<String, dynamic> json) =>
