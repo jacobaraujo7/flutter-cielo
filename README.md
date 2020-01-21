@@ -38,7 +38,7 @@ final CieloEcommerce cielo = CieloEcommerce(
         creditCard: CreditCard( //objeto de Cartão de crédito
           cardNumber: "1234123412341231", //número do cartão
           holder: "Teste Holder", //nome do usuário impresso no cartão
-          expirationDate: "12/2030", // data de expiração
+          expirationDate: "12/2025", // data de expiração
           securityCode: "123", // código de segurança
           brand: "Visa", // bandeira
         )
@@ -62,9 +62,9 @@ final CieloEcommerce cielo = CieloEcommerce(
 
 CreditCard cart = CreditCard(
           customerName: "Comprador Teste Cielo",
-          cardNumber: "1234123412341231",
+          cardNumber: "5352936666816531",
           holder: "Teste Holder",
-          expirationDate: "12/2030",
+          expirationDate: "12/2025",
           brand: "Visa",
         );
     try {
