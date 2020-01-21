@@ -59,7 +59,7 @@ class CieloEcommerce {
   }
 
   _getErrorDio(DioError e) {
-    if (e?.response != null) {
+    if (e?.response != null && e?.response != "") {
       List<CieloError> errors =
           (e.response.data as List).map((i) => CieloError.fromJson(i)).toList();
       throw CieloException(errors, e.message);

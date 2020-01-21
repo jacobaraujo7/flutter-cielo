@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
     //     creditCard: CreditCard(
     //       cardNumber: "1234123412341231",
     //       holder: "Teste Holder",
-    //       expirationDate: "12/2030",
+    //       expirationDate: "12/2025",
     //       securityCode: "123",
     //       brand: "Visa",
     //     )
@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // CreditCard cart = CreditCard(
     //   customerName: "Comprador Teste Cielo",
-    //   cardNumber: "1234123412341231",
+    //   cardNumber: "5352936666816531",
     //   securityCode: "123",
     //   holder: "SARA M M F",
     //   expirationDate: "10/2026",
