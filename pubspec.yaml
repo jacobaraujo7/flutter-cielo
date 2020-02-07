@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   #json_annotation: ^2.0.0
-  dio: ^2.0.0
+  dio: ^3.0.8
   flutter:
     sdk: flutter
 
