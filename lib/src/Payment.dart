@@ -17,6 +17,7 @@ class Payment {
   String instructions;
   String softDescriptor;
   CreditCard creditCard;
+  CreditCard debitCard;
 
   String url;
   String number;
@@ -53,6 +54,7 @@ class Payment {
     this.installments,
     this.softDescriptor,
     this.creditCard,
+    this.debitCard,
     this.url,
     this.number,
     this.barCodeNumber,
@@ -81,5 +83,6 @@ class Payment {
 
 class TypePayment {
   static String get creditCard => 'CreditCard';
+  static String get debitCard => 'DebitCard';
   static String get boleto => 'Boleto';
 }

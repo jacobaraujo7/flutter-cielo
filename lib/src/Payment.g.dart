@@ -23,6 +23,9 @@ Payment _$PaymentFromJson(Map<String, dynamic> json) {
       creditCard: json['CreditCard'] == null
           ? null
           : CreditCard.fromJson(json['CreditCard'] as Map<String, dynamic>),
+      debitCard: json['DebitCard'] == null
+          ? null
+          : CreditCard.fromJson(json['DebitCard'] as Map<String, dynamic>),
       url: json['Url'] as String,
       number: json['Number'] as String,
       barCodeNumber: json['BarCodeNumber'] as String,
@@ -61,6 +64,7 @@ Map<String, dynamic> _$PaymentToJson(Payment instance) => <String, dynamic>{
       'Instructions': instance.instructions,
       'SoftDescriptor': instance.softDescriptor,
       'CreditCard': instance.creditCard,
+      'DebitCard': instance.debitCard,
       'Url': instance.url,
       'Number': instance.number,
       'BarCodeNumber': instance.barCodeNumber,
