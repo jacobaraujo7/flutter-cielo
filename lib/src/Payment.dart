@@ -17,6 +17,7 @@ class Payment {
   String instructions;
   String softDescriptor;
   CreditCard creditCard;
+  CreditCard debitCard;
 
   String url;
   String number;
@@ -37,7 +38,8 @@ class Payment {
   String tid;
   String authorizationCode;
   String returnCode;
-  String returnMessage;
+  String returnMessage; // Obrigatório para pagamento com débito
+  String returnUrl;
 
   Payment({
     this.type,
@@ -53,6 +55,7 @@ class Payment {
     this.installments,
     this.softDescriptor,
     this.creditCard,
+    this.debitCard,
     this.url,
     this.number,
     this.barCodeNumber,
@@ -72,6 +75,7 @@ class Payment {
     this.authorizationCode,
     this.returnCode,
     this.returnMessage,
+    this.returnUrl,
   });
 
   factory Payment.fromJson(Map<String, dynamic> json) =>
@@ -81,5 +85,6 @@ class Payment {
 
 class TypePayment {
   static String get creditCard => 'CreditCard';
+  static String get debitCard => 'DebitCard';
   static String get boleto => 'Boleto';
 }
