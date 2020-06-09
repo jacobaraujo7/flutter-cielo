@@ -47,7 +47,9 @@ Payment _$PaymentFromJson(Map<String, dynamic> json) {
       tid: json['Tid'] as String,
       authorizationCode: json['AuthorizationCode'] as String,
       returnCode: json['ReturnCode'] as String,
-      returnMessage: json['ReturnMessage'] as String);
+      returnMessage: json['ReturnMessage'] as String,
+      returnUrl: json['ReturnUrl'] as String,
+      );
 }
 
 Map<String, dynamic> _$PaymentToJson(Payment instance) => <String, dynamic>{
@@ -83,5 +85,6 @@ Map<String, dynamic> _$PaymentToJson(Payment instance) => <String, dynamic>{
       'Tid': instance.tid,
       'AuthorizationCode': instance.authorizationCode,
       'ReturnCode': instance.returnCode,
-      'ReturnMessage': instance.returnMessage
+      'ReturnMessage': instance.returnMessage,
+      'ReturnUrl': instance.returnUrl,
     };

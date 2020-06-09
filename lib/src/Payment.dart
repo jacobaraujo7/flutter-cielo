@@ -38,7 +38,8 @@ class Payment {
   String tid;
   String authorizationCode;
   String returnCode;
-  String returnMessage;
+  String returnMessage; // Obrigatório para pagamento com débito
+  String returnUrl;
 
   Payment({
     this.type,
@@ -74,6 +75,7 @@ class Payment {
     this.authorizationCode,
     this.returnCode,
     this.returnMessage,
+    this.returnUrl,
   });
 
   factory Payment.fromJson(Map<String, dynamic> json) =>
